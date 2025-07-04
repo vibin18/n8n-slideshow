@@ -2,7 +2,7 @@
 APP_NAME := slideshow
 DOCKER_IMAGE := slideshow-api
 DOCKER_TAG := latest
-BACKEND_PORT := 8080
+BACKEND_PORT := 7070
 FRONTEND_PORT := 3000
 
 # Default target
