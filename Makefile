@@ -67,7 +67,7 @@ docker-run:
 	@echo "Running Docker container in production mode..."
 	@echo "Application will be available on port $(BACKEND_PORT)"
 	@echo "Note: In production mode, both frontend and API are served on the same port"
-	docker run -p $(BACKEND_PORT):$(BACKEND_PORT) --name $(APP_NAME) $(DOCKER_IMAGE):$(DOCKER_TAG)
+	docker run -d -p $(BACKEND_PORT):$(BACKEND_PORT) --name $(APP_NAME) $(DOCKER_IMAGE):$(DOCKER_TAG)
 
 # Stop Docker container
 .PHONY: docker-stop

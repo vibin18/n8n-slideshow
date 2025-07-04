@@ -78,7 +78,7 @@ You can build and run the application using Docker:
 docker build -t slideshow-api .
 
 # Run the container
-docker run -p 8080:8080 slideshow-api
+docker run -p 7070:7070 slideshow-api
 ```
 
 The Docker image uses a multi-stage build process to create a lightweight production image.
@@ -96,7 +96,7 @@ go mod tidy
 go run main.go
 ```
 
-The backend server will start on port 8080.
+The backend server will start on port 7070.
 
 ### Running the Frontend
 
@@ -114,14 +114,14 @@ The React development server will start on port 3000.
 
 Open your browser and navigate to:
 - Development mode: http://localhost:3000/slideshow
-- Production mode: http://localhost:8080/slideshow
+- Production mode: http://localhost:7070/slideshow
 
 ### Updating the Slideshow
 
 Send a POST request to `/api/slideshow` with the required JSON payload. For example:
 
 ```bash
-curl -X POST http://localhost:8080/api/slideshow \
+curl -X POST http://localhost:7070/api/slideshow \
   -H "Content-Type: application/json" \
   -d '{
     "image": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD...",

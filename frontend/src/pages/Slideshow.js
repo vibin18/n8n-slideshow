@@ -25,7 +25,7 @@ const Slideshow = () => {
     const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
     const hostname = window.location.hostname;
     // Use current hostname so it works both locally and on the network
-    const wsUrl = `${protocol}//${hostname}:8080/ws`;
+    const wsUrl = `${protocol}//${hostname}:7070/ws`;
     const ws = new WebSocket(wsUrl);
 
     // Set up WebSocket event handlers

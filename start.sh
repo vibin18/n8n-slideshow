@@ -11,8 +11,8 @@ BACKEND_PID=$!
 # Wait for backend to start
 sleep 2
 
-echo "Backend server started on http://localhost:8080"
-echo "Access slideshow at http://localhost:8080/slideshow"
+echo "Backend server started on http://localhost:7070"
+echo "Access slideshow at http://localhost:7070/slideshow"
 
 # Start the frontend development server
 echo "Starting React frontend development server..."

@@ -48,7 +48,7 @@ const sendApiRequest = async () => {
     // Prepare the request options
     const options = {
       hostname: 'localhost',
-      port: 8080,
+      port: 7070,
       path: '/api/slideshow',
       method: 'POST',
       headers: {
