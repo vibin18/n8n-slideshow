@@ -1,0 +1,104 @@
+/* App-wide styles */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.app {
+  text-align: center;
+}
+
+/* Home page styles */
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+.home-container h1 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.home-container a {
+  color: #0066cc;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.home-container a:hover {
+  text-decoration: underline;
+}
+
+/* Slideshow page styles */
+.slideshow-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #000;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.slide-text {
+  position: absolute;
+  color: white; /* Default, can be overridden */
+  font-family: Arial, sans-serif;
+  white-space: pre-wrap;
+}
+
+/* Fade transition effect */
+.fade-enter {
+  opacity: 0;
+}
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 1s ease-in;
+}
+.fade-exit {
+  opacity: 1;
+}
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 1s ease-out;
+}
+
+/* Slide transition effect */
+.slide-effect-enter {
+  transform: translateX(100%);
+}
+.slide-effect-enter-active {
+  transform: translateX(0);
+  transition: transform 1s ease-in-out;
+}
+.slide-effect-exit {
+  transform: translateX(0);
+}
+.slide-effect-exit-active {
+  transform: translateX(-100%);
+  transition: transform 1s ease-in-out;
+}
